@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- MATERIAL CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Logo">
+                    <h2>CHAR<span class="danger">LES</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard/index.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Expense Tracker/index.html">
+                    <span class="material-icons-sharp">savings</span>
+                    <h3>Expense Tracking</h3>
+                </a>
+                <a href="../BudgetManagement/budgetmanagement.html">
+                    <span class="material-icons-sharp">account_balance_wallet</span>
+                    <h3>Budget Management</h3>
+                </a>
+                <a href="../Goal Setting and Tracking/index.html">
+                    <span class="material-icons-sharp">flag</span>
+                    <h3>Goal Setting and Tracking</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Financial Insights and Analysis</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="../Signin/sign_in.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+
+            <div class="financial-insights">
+                <h1>Financial Insights and Analysis Tool</h1>
+                <div class="expense-form">
+                    <h2>Add Expense</h2>
+                    <form id="expense-form">
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <input type="text" id="category" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                            <input type="number" id="amount" required>
+                        </div>
+                        <button type="submit">Add Expense</button>
+                    </form>
+                </div>
+
+                <div class="report-section">
+                    <h2>Expense Report</h2>
+                    <button id="generate-report">Generate Report</button>
+                    <div class="report">
+                        <canvas id="expense-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

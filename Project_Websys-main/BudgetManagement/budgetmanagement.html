@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Logo">
+                    <h2>CHAR<span class="danger">LES</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard/index.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Expense Tracker/index.html">
+                    <span class="material-icons-sharp">savings</span>
+                    <h3>Expense Tracking</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">account_balance_wallet</span>
+                    <h3>Budget Management</h3>
+                </a>
+                <a href="../Goal Setting and Tracking/index.html">
+                    <span class="material-icons-sharp">flag</span>
+                    <h3>Goal Setting and Tracking</h3>
+                </a>
+                <a href="../Financial Insights and Analysis/index.html">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Financial Insights and Analysis</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="../Signin/sign_in.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Budget Management Tool</h1>
+            <div class="budget-form">
+                <h2>Set Budgets</h2>
+                <form id="budget-form">
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Budget Amount:</label>
+                        <input type="number" id="amount" required>
+                    </div>
+                    <button type="submit">Add Budget</button>
+                </form>
+            </div>
+
+            <div class="expense-form">
+                <h2>Add Expense</h2>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label for="expense-category">Category:</label>
+                        <input type="text" id="expense-category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expense-amount">Expense Amount:</label>
+                        <input type="number" id="expense-amount" required>
+                    </div>
+                    <button type="submit">Add Expense</button>
+                </form>
+            </div>
+
+            <div class="budget-list">
+                <h2>Budgets</h2>
+                <ul id="budget-list"></ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
